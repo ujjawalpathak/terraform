@@ -22,17 +22,17 @@ We have made several assumptions while creating this project.
 **Variables:**
 Input variables and their values set inside variables.tf file.
 **|Name|	Default Value|	Description|**
-**|----|---------------|-------------|** 
-|region|	us-west-2|	AWS Deployment region|
-|environment|	terraform|	Environment Name to be added in tag|
-|vpc_cidr|	20.0.0.0/16|	VPC CIDR block|
-|public_subnets_cidr1|	20.0.10.0/24|	Public Subnet 1 CIDR block|
-|public_subnets_cidr2|	20.0.20.0/24|	Public Subnet 2 CIDR block|
-|private_subnets_cidr|	20.0.11.0/24|	Private Subnet CIDR block|
-|availability_zonesA|	us-west-2a|	Availability Zone A|
-|availability_zonesB|	us-west-2b|	Availability Zone B|
-|alb_port|	80|	The port the ELB will use for HTTP requests|
-|ami_id|	ami-0873b46c45c11058d|	EC2 ami id|
-|ec2_type|	t2.micro|	Instance type|
-|block_volume|	8|	The ebs block volume size|
+**|----|-----------------|-------------|** 
+**|region|	us-west-2|	AWS Deployment region|**
+**|environment|	terraform|	Environment Name to be added in tag|**
+**|vpc_cidr|	20.0.0.0/16|	VPC CIDR block|**
+**|public_subnets_cidr1|	20.0.10.0/24|	Public Subnet 1 CIDR block|**
+**|public_subnets_cidr2|	20.0.20.0/24|	Public Subnet 2 CIDR block|**
+**|private_subnets_cidr|	20.0.11.0/24|	Private Subnet CIDR block|**
+**|availability_zonesA|	us-west-2a|	Availability Zone A|**
+**|availability_zonesB|	us-west-2b|	Availability Zone B|**
+**|alb_port|	80|	The port the ELB will use for HTTP requests|**
+**|ami_id|	ami-0873b46c45c11058d|	EC2 ami id|**
+**|ec2_type|	t2.micro|	Instance type|**
+**|block_volume|	8|	The ebs block volume size|**
 
