@@ -22,7 +22,7 @@ We have made several assumptions while creating this project.
 **Variables:**
 Input variables and their values set inside variables.tf file.
 **|Name|	Default Value|	Description|**
-|----|---------------|-------------| 
+**|----|---------------|-------------|** 
 |region|	us-west-2|	AWS Deployment region|
 |environment|	terraform|	Environment Name to be added in tag|
 |vpc_cidr|	20.0.0.0/16|	VPC CIDR block|
