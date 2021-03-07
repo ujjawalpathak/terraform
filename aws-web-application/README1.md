@@ -1,4 +1,4 @@
-README.md 
+#**README.md**
 
 This directory contains the terraform project which creates AWS stack for running a scalable web application.
 To run this project, use below commands: 
@@ -7,7 +7,7 @@ _terraform plan_
 _terraform apply_
 Once the stack formation is complete, we can directly use the ALB arn displayed as output to access the web server. 
 
-##Assumption:
+**Assumption:**
 We have made several assumptions while creating this project.
 1.	This template is just for understanding and should not be used for production.
 2.	To keep this template generic, we have provided all the values in the variables.tf file.
@@ -19,9 +19,9 @@ We have made several assumptions while creating this project.
 8.	Health check is added to Autoscaling group.
 9.	Application Load Balancer is created with a rule attached to it, forwarding request over to Target Group.
 
-##Variables
+**Variables:**
 Input variables and their values set inside variables.tf file.
-|Name|	Default Value|	Description|
+**|Name|	Default Value|	Description|**
 |----|---------------|-------------| 
 |region|	us-west-2|	AWS Deployment region|
 |environment|	terraform|	Environment Name to be added in tag|
