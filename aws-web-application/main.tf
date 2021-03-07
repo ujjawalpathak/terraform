@@ -160,6 +160,7 @@ resource "aws_launch_configuration" "as_conf" {
   ebs_block_device{
     device_name = "/dev/sdb"
 	volume_size = var.block_volume
+	encrypted   = "true"
  }
   
   user_data = <<-EOF
@@ -181,7 +182,7 @@ resource "aws_autoscaling_group" "asg" {
   desired_capacity   = 1
   min_size = 1
   max_size = 2
-  vpc_zone_identifier = [aws_subnet.public_subnet1.id, aws_subnet.public_subnet2.id]
+  vpc_zone_identifier = [aws_subnet.private_subnet.id]
 
   health_check_type = "ELB"
 
@@ -195,6 +196,14 @@ resource "aws_autoscaling_group" "asg" {
     value               = "web-app"
     propagate_at_launch = true
   }
+}
+
+resource "aws_autoscaling_policy" "asg_policy" {
+  name                   = "asg-policy"
+  scaling_adjustment     = 1
+  adjustment_type        = "ChangeInCapacity"
+  cooldown               = 300
+  autoscaling_group_name = aws_autoscaling_group.asg.name
 }
 
 /*==== Target Group ======*/
@@ -246,3 +255,4 @@ resource "aws_lb_listener" "app" {
     type             = "forward"
   }
 }
+
